@@ -113,6 +113,20 @@ test_that("supports geom_crossbar()", {
   )
 })
 
+test_that("supports geom_density()", {
+  library(ggplot2)
+  d <- ggplot(mpg, aes(hwy, fill = 1)) +
+    geom_density()
+  expect_doppelganger(
+    "geom_density(x)",
+     d + scale_fill_x_binned()
+  )
+  expect_doppelganger(
+    "geom_density(y)",
+    d + scale_fill_y_binned()
+  )
+})
+
 test_that("supports geom_density_2d_filled()", {
   library(ggplot2)
   m <- ggplot(faithful, aes(x = eruptions, y = waiting)) +
