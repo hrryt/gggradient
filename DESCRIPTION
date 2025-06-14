@@ -1,9 +1,11 @@
 Package: gggradient
-Title: What the Package Does (One Line, Title Case)
+Title: Scales for Gradient Fills in 'ggplot2'
 Version: 0.0.0.9000
 Authors@R: 
     person("Harry", "Thompson", , "harry@mayesfield.uk", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: Scales to map continuous x or y data values onto the fill
+    aesthetic, producing a gradient fill along an axis in a 'ggplot2' plot.
+    Set continuous or binned scales that vary fill across individual shapes.
 License: GPL (>= 3)
 Suggests: 
     fontquiver,

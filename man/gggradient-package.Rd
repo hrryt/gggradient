@@ -4,9 +4,9 @@
 \name{gggradient-package}
 \alias{gggradient}
 \alias{gggradient-package}
-\title{gggradient: What the Package Does (One Line, Title Case)}
+\title{gggradient: Scales for Gradient Fills in 'ggplot2'}
 \description{
-What the package does (one paragraph).
+Scales to map continuous x or y data values onto the fill aesthetic, producing a gradient fill along an axis in a 'ggplot2' plot. Set continuous or binned scales that vary fill across individual shapes.
 }
 \author{
 \strong{Maintainer}: Harry Thompson \email{harry@mayesfield.uk}
