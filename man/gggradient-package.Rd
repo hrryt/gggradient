@@ -12,6 +12,7 @@ Scales to map continuous x or y data values onto the fill aesthetic, producing a
 Useful links:
 \itemize{
   \item \url{https://github.com/hrryt/gggradient}
+  \item \url{https://hrryt.github.io/gggradient/}
   \item Report bugs at \url{https://github.com/hrryt/gggradient/issues}
 }
 

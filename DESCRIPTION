@@ -28,5 +28,5 @@ Imports:
     grid,
     rlang,
     scales
-URL: https://github.com/hrryt/gggradient
+URL: https://github.com/hrryt/gggradient, https://hrryt.github.io/gggradient/
 BugReports: https://github.com/hrryt/gggradient/issues
