@@ -8,6 +8,14 @@
 \description{
 Scales to map continuous x or y data values onto the fill aesthetic, producing a gradient fill along an axis in a 'ggplot2' plot. Set continuous or binned scales that vary fill across individual shapes.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/hrryt/gggradient}
+  \item Report bugs at \url{https://github.com/hrryt/gggradient/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Harry Thompson \email{harry@mayesfield.uk}
 

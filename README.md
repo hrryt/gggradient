@@ -11,7 +11,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 status](https://www.r-pkg.org/badges/version/gggradient)](https://CRAN.R-project.org/package=gggradient)
 <!-- badges: end -->
 
-The goal of gggradient is to …
+The goal of gggradient is to provide a flexible ggplot2 interface with
+`grid::linearGradient()` using familiar fill scale syntax.
 
 ## Installation
 
