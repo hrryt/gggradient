@@ -1,8 +1,14 @@
 #' @export
 #' @importFrom ggplot2 ggplot_add
 ggplot_add.gggradient_scale <- function(object, plot, object_name) {
-  plot0 <- plot
+  half_built <- suppressMessages(half_build(plot))
+  position_scale <- half_built$scales$get_scales(object$position)
+  object <- construct_scale(object, position_scale)
+  plot$scales$add(object)
+  plot
+}
 
+half_build <- function(plot) {
   plot <- plot_clone(plot)
   if (length(plot$layers) == 0) {
     plot <- plot + ggplot2::geom_blank()
@@ -30,12 +36,7 @@ ggplot_add.gggradient_scale <- function(object, plot, object_name) {
   data <- by_layer(function(l, d) l$map_statistic(d, plot),
                    layers, data, "mapping stat to aesthetics")
   plot$scales$add_missing(c("x", "y"), plot$plot_env)
-
-  position_scale <- plot$scales$get_scales(object$position)
-  object <- construct_scale(object, position_scale)
-
-  plot0$scales$add(object)
-  plot0
+  plot
 }
 
 plot_clone <- function(plot) {
@@ -51,7 +52,8 @@ by_layer <- function(f, layers, data, step = NULL) {
     out[[i]] <- f(l = layers[[i]], d = data[[i]])
   }, error = function(cnd) {
     cli::cli_abort(
-      c("Problem while {step}.", i = "Error occurred in the {ordinal(i)} layer."),
+      c("Problem while {step}.",
+        i = "Error occurred in the {ordinal(i)} layer."),
       call = layers[[i]]$constructor, parent = cnd
     )
   })
