@@ -3,7 +3,7 @@ construct_scale <- function(object, position_scale) {
 
   force(object)
   force(position_scale)
-  stops <- seq(0, 1, length.out = object$n.colours)
+  stops <- object$stops
 
   ggplot2::ggproto(
     "ScaleContinuousGradient", object$gradient_scale,

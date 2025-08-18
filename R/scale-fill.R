@@ -67,22 +67,26 @@
 #'     "xlower", "xupper", "notchlower", "notchupper"
 #'   ))
 scale_fill_x <- function(..., type = getOption("ggplot2.continuous.fill"),
-                         n.colours = 500, na.rm = FALSE, group = TRUE,
+                         n.colours = 500,
+                         stops = seq(0, 1, length.out = n.colours),
+                         na.rm = FALSE, group = TRUE,
                          bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_continuous(..., type = type)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y <- function(..., type = getOption("ggplot2.continuous.fill"),
-                         n.colours = 500, na.rm = FALSE, group = TRUE,
+                         n.colours = 500,
+                         stops = seq(0, 1, length.out = n.colours),
+                         na.rm = FALSE, group = TRUE,
                          bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_continuous(..., type = type)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
@@ -97,285 +101,337 @@ scale_fill_y_continuous <- scale_fill_y
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_binned <- function(..., type = getOption("ggplot2.binned.fill"),
-                                n.colours = 500, na.rm = FALSE, group = TRUE,
+                                n.colours = 500,
+                                stops = seq(0, 1, length.out = n.colours),
+                                na.rm = FALSE, group = TRUE,
                                 bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_binned(..., type = type)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_binned <- function(..., type = getOption("ggplot2.binned.fill"),
-                                n.colours = 500, na.rm = FALSE, group = TRUE,
+                                n.colours = 500,
+                                stops = seq(0, 1, length.out = n.colours),
+                                na.rm = FALSE, group = TRUE,
                                 bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_binned(..., type = type)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_date <- function(...,
-                              n.colours = 500, na.rm = FALSE, group = TRUE,
+                              n.colours = 500,
+                              stops = seq(0, 1, length.out = n.colours),
+                              na.rm = FALSE, group = TRUE,
                               bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_date(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_date <- function(...,
-                              n.colours = 500, na.rm = FALSE, group = TRUE,
+                              n.colours = 500,
+                              stops = seq(0, 1, length.out = n.colours),
+                              na.rm = FALSE, group = TRUE,
                               bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_date(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_datetime <- function(...,
-                                  n.colours = 500, na.rm = FALSE, group = TRUE,
+                                  n.colours = 500,
+                                  stops = seq(0, 1, length.out = n.colours),
+                                  na.rm = FALSE, group = TRUE,
                                   bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_datetime(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_datetime <- function(...,
-                                  n.colours = 500, na.rm = FALSE, group = TRUE,
+                                  n.colours = 500,
+                                  stops = seq(0, 1, length.out = n.colours),
+                                  na.rm = FALSE, group = TRUE,
                                   bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_datetime(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_fermenter <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_fermenter(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_fermenter <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_fermenter(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_distiller <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_distiller(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_distiller <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_distiller(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_gradient <- function(...,
-                                  n.colours = 500, na.rm = FALSE, group = TRUE,
+                                  n.colours = 500,
+                                  stops = seq(0, 1, length.out = n.colours),
+                                  na.rm = FALSE, group = TRUE,
                                   bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_gradient(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_gradient <- function(...,
-                                  n.colours = 500, na.rm = FALSE, group = TRUE,
+                                  n.colours = 500,
+                                  stops = seq(0, 1, length.out = n.colours),
+                                  na.rm = FALSE, group = TRUE,
                                   bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_gradient(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_gradient2 <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_gradient2(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_gradient2 <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_gradient2(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_gradientn <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_gradientn(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_gradientn <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_gradientn(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_steps <- function(...,
-                               n.colours = 500, na.rm = FALSE, group = TRUE,
+                               n.colours = 500,
+                               stops = seq(0, 1, length.out = n.colours),
+                               na.rm = FALSE, group = TRUE,
                                bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_steps(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_steps <- function(...,
-                               n.colours = 500, na.rm = FALSE, group = TRUE,
+                               n.colours = 500,
+                               stops = seq(0, 1, length.out = n.colours),
+                               na.rm = FALSE, group = TRUE,
                                bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_steps(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_steps2 <- function(...,
-                                n.colours = 500, na.rm = FALSE, group = TRUE,
+                                n.colours = 500,
+                                stops = seq(0, 1, length.out = n.colours),
+                                na.rm = FALSE, group = TRUE,
                                 bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_steps2(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_steps2 <- function(...,
-                                n.colours = 500, na.rm = FALSE, group = TRUE,
+                                n.colours = 500,
+                                stops = seq(0, 1, length.out = n.colours),
+                                na.rm = FALSE, group = TRUE,
                                 bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_steps2(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_stepsn <- function(...,
-                                n.colours = 500, na.rm = FALSE, group = TRUE,
+                                n.colours = 500,
+                                stops = seq(0, 1, length.out = n.colours),
+                                na.rm = FALSE, group = TRUE,
                                 bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_stepsn(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_stepsn <- function(...,
-                                n.colours = 500, na.rm = FALSE, group = TRUE,
+                                n.colours = 500,
+                                stops = seq(0, 1, length.out = n.colours),
+                                na.rm = FALSE, group = TRUE,
                                 bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_stepsn(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_viridis_c <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_viridis_c(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_viridis_c <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_viridis_c(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_x_viridis_b <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_viridis_b(...)
   new_gggradient_scale(
-    gradient_scale, "x", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "x", stops, na.rm, group, bounding.aes
   )
 }
 
 #' @rdname scale_fill_x
 #' @export
 scale_fill_y_viridis_b <- function(...,
-                                   n.colours = 500, na.rm = FALSE, group = TRUE,
+                                   n.colours = 500,
+                                   stops = seq(0, 1, length.out = n.colours),
+                                   na.rm = FALSE, group = TRUE,
                                    bounding.aes = NULL) {
   gradient_scale <- ggplot2::scale_fill_viridis_b(...)
   new_gggradient_scale(
-    gradient_scale, "y", n.colours, na.rm, group, bounding.aes
+    gradient_scale, "y", stops, na.rm, group, bounding.aes
   )
 }
