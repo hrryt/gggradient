@@ -10,6 +10,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%",
+  fig.height = 3,
   dpi = 300
 )
 ```
@@ -21,8 +22,10 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/gggradient)](https://CRAN.R-project.org/package=gggradient)
 <!-- badges: end -->
 
-The goal of gggradient is to provide a flexible ggplot2 interface with
-`grid::linearGradient()` using familiar fill scale syntax.
+<img src="man/figures/README-work.png" width="100%" />
+
+The goal of gggradient is to leverage the power of ggplot2 scale syntax
+to interface with the flexibility of `grid::linearGradient()` patterns.
 
 ## Installation
 
@@ -37,18 +40,19 @@ pak::pak("hrryt/gggradient")
 
 Easily create a gradient fill along a geometry:
 
-```{r}
+```{r bar}
 library(ggplot2)
 library(gggradient)
 
-ggplot(mpg, aes(class, fill = 1)) +
-  geom_bar(colour = "black") +
-  scale_fill_y_viridis_c()
+ggplot(mpg, aes(manufacturer, fill = 1)) +
+    geom_bar(colour = "black") +
+    scale_fill_y_viridis_c() +
+    theme_void()
 ```
 
 Discretise gradients with binned scales:
 
-```{r}
+```{r density}
 ggplot(mpg, aes(hwy, fill = 1)) +
   geom_density() +
   scale_fill_x_binned()
@@ -56,7 +60,7 @@ ggplot(mpg, aes(hwy, fill = 1)) +
 
 Flexibly specify gradients with the syntax of regular fill scales:
 
-```{r}
+```{r boxplot}
 ggplot(mpg, aes(hwy, class, fill = 1)) +
     geom_boxplot() +
     scale_fill_x_distiller(
