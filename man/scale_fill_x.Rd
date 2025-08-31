@@ -37,6 +37,7 @@ scale_fill_x(
   ...,
   type = getOption("ggplot2.continuous.fill"),
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -46,6 +47,7 @@ scale_fill_y(
   ...,
   type = getOption("ggplot2.continuous.fill"),
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -55,6 +57,7 @@ scale_fill_x_continuous(
   ...,
   type = getOption("ggplot2.continuous.fill"),
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -64,6 +67,7 @@ scale_fill_y_continuous(
   ...,
   type = getOption("ggplot2.continuous.fill"),
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -73,6 +77,7 @@ scale_fill_x_binned(
   ...,
   type = getOption("ggplot2.binned.fill"),
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -82,6 +87,7 @@ scale_fill_y_binned(
   ...,
   type = getOption("ggplot2.binned.fill"),
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -90,6 +96,7 @@ scale_fill_y_binned(
 scale_fill_x_date(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -98,6 +105,7 @@ scale_fill_x_date(
 scale_fill_y_date(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -106,6 +114,7 @@ scale_fill_y_date(
 scale_fill_x_datetime(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -114,6 +123,7 @@ scale_fill_x_datetime(
 scale_fill_y_datetime(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -122,6 +132,7 @@ scale_fill_y_datetime(
 scale_fill_x_fermenter(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -130,6 +141,7 @@ scale_fill_x_fermenter(
 scale_fill_y_fermenter(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -138,6 +150,7 @@ scale_fill_y_fermenter(
 scale_fill_x_distiller(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -146,6 +159,7 @@ scale_fill_x_distiller(
 scale_fill_y_distiller(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -154,6 +168,7 @@ scale_fill_y_distiller(
 scale_fill_x_gradient(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -162,6 +177,7 @@ scale_fill_x_gradient(
 scale_fill_y_gradient(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -170,6 +186,7 @@ scale_fill_y_gradient(
 scale_fill_x_gradient2(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -178,6 +195,7 @@ scale_fill_x_gradient2(
 scale_fill_y_gradient2(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -186,6 +204,7 @@ scale_fill_y_gradient2(
 scale_fill_x_gradientn(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -194,6 +213,7 @@ scale_fill_x_gradientn(
 scale_fill_y_gradientn(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -202,6 +222,7 @@ scale_fill_y_gradientn(
 scale_fill_x_steps(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -210,6 +231,7 @@ scale_fill_x_steps(
 scale_fill_y_steps(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -218,6 +240,7 @@ scale_fill_y_steps(
 scale_fill_x_steps2(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -226,6 +249,7 @@ scale_fill_x_steps2(
 scale_fill_y_steps2(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -234,6 +258,7 @@ scale_fill_y_steps2(
 scale_fill_x_stepsn(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -242,6 +267,7 @@ scale_fill_x_stepsn(
 scale_fill_y_stepsn(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -250,6 +276,7 @@ scale_fill_y_stepsn(
 scale_fill_x_viridis_c(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -258,6 +285,7 @@ scale_fill_x_viridis_c(
 scale_fill_y_viridis_c(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -266,6 +294,7 @@ scale_fill_y_viridis_c(
 scale_fill_x_viridis_b(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -274,6 +303,7 @@ scale_fill_x_viridis_b(
 scale_fill_y_viridis_b(
   ...,
   n.colours = 500,
+  stops = seq(0, 1, length.out = n.colours),
   na.rm = FALSE,
   group = TRUE,
   bounding.aes = NULL
@@ -290,6 +320,10 @@ scale_fill_y_viridis_b(
 }}
 
 \item{n.colours}{Number of colours for the gradient to transition between.}
+
+\item{stops}{Locations of the gradient colours between the start and end
+    points of the gradient (as a proportion of the distance from the
+    start point to the end point).}
 
 \item{na.rm}{If \code{FALSE}, the default, missing values are removed with
 a warning. If \code{TRUE}, missing values are silently removed.}
